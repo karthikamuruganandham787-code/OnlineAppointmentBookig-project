@@ -1,0 +1,32 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
+<header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+        <a href="${pageContext.request.contextPath}/" class="brand">
+            <span class="brand-mark">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>
+            </span>
+            Medi<span class="accent">Book</span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="${pageContext.request.contextPath}/" class="${activePage == 'home' ? 'active' : ''}">Home</a>
+            <a href="${pageContext.request.contextPath}/doctors" class="${activePage == 'doctors' ? 'active' : ''}">Doctors</a>
+            <a href="${pageContext.request.contextPath}/services" class="${activePage == 'services' ? 'active' : ''}">Services</a>
+            <a href="${pageContext.request.contextPath}/appointment" class="${activePage == 'myAppointments' ? 'active' : ''}">My Appointment</a>
+        </nav>
+
+        <div class="header-actions">
+            <a href="${pageContext.request.contextPath}/booking" class="btn btn-primary btn-sm">Book Appointment</a>
+            <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+    <nav class="mobile-nav" id="mobileNav">
+        <a href="${pageContext.request.contextPath}/">Home</a>
+        <a href="${pageContext.request.contextPath}/doctors">Doctors</a>
+        <a href="${pageContext.request.contextPath}/services">Services</a>
+        <a href="${pageContext.request.contextPath}/appointment">My Appointment</a>
+        <a href="${pageContext.request.contextPath}/booking">Book Appointment</a>
+    </nav>
+</header>
